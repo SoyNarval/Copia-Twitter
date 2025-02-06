@@ -1,33 +1,41 @@
 import React from 'react'
 import { useTweets } from '../context/TweetsContext'
+import Loading from '@/app/Loading'
 
 export default function DMessages({setPage, setProfile}) {
 
     const tweets = useTweets()
     const imgsrc = "/images/profile-pictures/"
 
+    if(!tweets){
+        <Loading/>
+    }
+
     const renderMessages = () => {
-        return tweets.slice(0, 10).map((tweet) => {
-            return (
-                <div key={tweet.id} className='flex flex-col justify-center w-full p-4 border-b border-slate-200 hover:bg-slate-200' href='https://portfolio.igpemo.es/' target="_blank">
-                    <div className='flex items-center'>
-                        <img src={`${imgsrc}${tweet.userImage}`} className='w-10 h-10 rounded-full' alt='profile picture' onClick={(e) => {e.stopPropagation; setPage("profile"); setProfile(tweet.user)}} />
-                        <div className='flex flex-col p-2'>
-                            <div className='flex'>
-                                <p className='text-sm font-bold'>{tweet.name}</p>
-                                <p className='text-sm'>{tweet.user}</p>
+        
+        if (Array.isArray(tweets)) {
+            return tweets.slice(0, 10).map((tweet) => {
+                return (
+                    <div key={tweet.id} className='flex flex-col justify-center w-full p-4 border-b border-slate-200 hover:bg-slate-200'>
+                        <div className='flex items-center'>
+                            <img src={`${imgsrc}${tweet.userImage}`} className='w-10 h-10 rounded-full' alt='profile picture' onClick={(e) => {e.stopPropagation(); setPage("profile"); setProfile(tweet.user)}} />
+                            <div className='flex flex-col p-2'>
+                                <div className='flex'>
+                                    <p className='text-sm font-bold'>{tweet.name}</p>
+                                    <p className='text-sm'>{tweet.user}</p>
+                                </div>
+                                <a className='text-sm'>Hey honey, visit my page</a>
                             </div>
-                            
-                            <a className='text-sm'>Hey honey, visit my page</a>
+                        </div>
+                        <div className='text-right'>
+                            <p className='text-sm'>{tweet.date}</p>
                         </div>
                     </div>
-                    <div className='text-right'>
-                        <p className='text-sm'>{tweet.date}</p>
-                    </div>
-                </div>
-            )
-        })
-        
+                );
+            });
+        } else {
+            return <p>No tweets available</p>
+        }
     }
 
   return (
