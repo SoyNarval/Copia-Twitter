@@ -54,7 +54,7 @@ export default function RightAside({setProfile, setPage}) {
           </div>
         </div>
 
-        <div className='sticky top-0 z-2 h-full flex flex-col gap-4 bg-white border border-gray-200 rounded-xl  '>
+        <div className='sticky top-0 z-1 h-full flex flex-col gap-4 bg-white border border-gray-200 rounded-xl  '>
           <h2 className='text-2xl font-bold border-b border-gray-200 p-3'>What's happening</h2>
 
           <div className=' flex flex-col gap-1 border-b border-gray-200 p-4 cursor-pointer' onClick={() => setPage("search")}>
