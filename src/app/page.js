@@ -111,7 +111,7 @@ export default function Home() {
           </div>
 
           {showToTweet && 
-            <div className="fixed top-0 left-0 w-screen h-screen bg-black bg-opacity-50 flex flex-col justify-center items-center gap-4 z-2 overflow-">
+            <div className="fixed top-0 left-0 w-screen h-screen bg-black bg-opacity-50 flex flex-col justify-center items-center gap-4 z-20">
               <button className="p-4 bg-white hover:bg-gray-200 rounded-full" title="Close" onClick={() => setShowToTweet(false)}>&#x2716;</button>
               <div className="bg-white max-md:w-full w-2/3 p-4">
                 <ToTweet/>

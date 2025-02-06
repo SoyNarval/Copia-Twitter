@@ -51,7 +51,7 @@ export default function Timeline({setProfile, setPage, setShowTweet, showTweet})
 
   return (
     <div>
-      <div className='flex flex-row bg-white border-b border-gray-300 justify-between sticky w-full top-0 z-9'>
+      <div className='flex flex-row bg-white border-b border-gray-300 justify-between sticky w-full top-0 z-10'>
         <button className={`flex flex-col items-center justify-center w-full hover:bg-gray-200 p-4 font-bold ${activePage ? "text-black font-bold" : "text-gray-600 font-semibold"}`} title='For you' onClick={() => setActivePage(true)}>
           For you
           <div  className={`border-2 rounded-full w-1/3 ${activePage ? "border-blue-600" : "border-transparent"}`}></div>
