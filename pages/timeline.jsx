@@ -6,7 +6,7 @@ import Tweet from '@/components/Tweet'
 import { useTweets } from '../context/TweetsContext'
 import ShowTweet from '@/components/ShowTweet'
 import ShowImg from '@/components/ShowImg'
-import Loading from '@/app/loading'
+import Loading from '@/app/Loading'
 
 export default function Timeline({setProfile, setPage, setShowTweet, showTweet}) {
 
