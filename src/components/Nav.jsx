@@ -13,7 +13,7 @@ export default function Nav({setProfile, setPage, setShowToTweet}) {
     }
 
     return (
-        <div className='h-screen w-full flex flex-col justify-between items-center border-r border-gray-200'>
+        <div className='h-screen w-full flex flex-col justify-between items-start border-r border-gray-200'>
             <a className='border-b border-gray-200 hover:bg-gray-200 rounded-full p-4' title='Home' href='/' onClick={() => setFocus("home")}>
                 <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -42,6 +42,7 @@ export default function Nav({setProfile, setPage, setShowToTweet}) {
                 stroke-width="2"
                 stroke-linecap="round"
                 stroke-linejoin="round"
+                color={focus === "home" ? "slategrey" : "black"}
                 >
                 <path d="M5 12l-2 0l9 -9l9 9l-2 0" />
                 <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
@@ -61,6 +62,7 @@ export default function Nav({setProfile, setPage, setShowToTweet}) {
                 stroke-width="3"
                 stroke-linecap="round"
                 stroke-linejoin="round"
+                color={focus === "search" ? "slategrey" : "black"}
                 >
                 <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" />
                 <path d="M21 21l-6 -6" />
@@ -79,6 +81,7 @@ export default function Nav({setProfile, setPage, setShowToTweet}) {
                 stroke-width="2.5"
                 stroke-linecap="round"
                 stroke-linejoin="round"
+                color={focus === "notifications" ? "slategrey" : "black"}
                 >
                 <path d="M10 5a2 2 0 1 1 4 0a7 7 0 0 1 4 6v3a4 4 0 0 0 2 3h-16a4 4 0 0 0 2 -3v-3a7 7 0 0 1 4 -6" />
                 <path d="M9 17v1a3 3 0 0 0 6 0v-1" />
@@ -97,6 +100,7 @@ export default function Nav({setProfile, setPage, setShowToTweet}) {
                 stroke-width="2.5"
                 stroke-linecap="round"
                 stroke-linejoin="round"
+                color={focus === "dm" ? "slategrey" : "black"}
                 >
                 <path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z" />
                 <path d="M3 7l9 6l9 -6" />
@@ -137,6 +141,7 @@ export default function Nav({setProfile, setPage, setShowToTweet}) {
                 stroke-width="2.5"
                 stroke-linecap="round"
                 stroke-linejoin="round"
+                color={focus === "profile" ? "slategrey" : "black"}
                 >
                 <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />
                 <path d="M12 10m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />

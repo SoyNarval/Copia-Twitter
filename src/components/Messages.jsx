@@ -46,7 +46,7 @@ export default function Messages() {
 
   return (
     <div 
-        className={`w-96 max-h-[400px] fixed right-10 z-1 bg-white p-4 rounded-lg shadow-md border border-slate-200`} 
+        className={`w-96 max-h-[400px] fixed right-10 z-1 bg-background p-4 rounded-lg shadow-md border border-slate-200`} 
         style={{
             bottom: topPosition,
             transition: 'bottom 0.3s ease-out', 

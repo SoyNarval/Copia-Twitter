@@ -57,7 +57,7 @@ export default function Profile({  profile, setShowImage, showImage, setPage, sh
                 {/* Header */}
                 <div className='h-full w-full'>
 
-                    <div className='flex gap-8 p-2 sticky bg-white z-2'>
+                    <div className='flex gap-8 p-2 sticky bg-background z-2'>
                         <button className='flex px-4 rounded-full hover:bg-slate-200 items-center' onClick={() => setPage("home")}>&#8592;</button>
                         <div>
                             <h2 className='text-2xl font-bold'>{name}</h2>
@@ -150,7 +150,7 @@ export default function Profile({  profile, setShowImage, showImage, setPage, sh
                                 </a>
 
                                 <button 
-                                    className={` font-bold border p-2 w-36 lg:w-48 rounded-full bg-slate-950 hover:bg-slate-900 ${following ? "bg-white text-slate-800 hover:bg-white hover:text-red-400 hover:border-red-400" : "text-white"}`} 
+                                    className={` font-bold border p-2 w-36 lg:w-48 rounded-full bg-slate-950 hover:bg-slate-900 ${following ? "bg-background text-slate-800 hover:bg-background hover:text-red-400 hover:border-red-400" : "text-white"}`} 
                                     onClick={() => setFollowing(!following)}
                                     onMouseEnter={() => setIsHovered(true)}
                                     onMouseLeave={() => setIsHovered(false)}

@@ -29,7 +29,7 @@ export default function RightAside({setProfile, setPage}) {
             </div>
             
             <button 
-              className={` font-bold border p-2 w-36 lg:w-48 rounded-full bg-slate-950 hover:bg-slate-900 ${following ? "bg-white text-slate-800 hover:bg-white hover:text-red-400 hover:border-red-400" : "text-white"}`} 
+              className={` font-bold border p-2 w-36 lg:w-48 rounded-full bg-slate-950 hover:bg-slate-900 ${following ? "bg-background text-slate-800 hover:bg-background hover:text-red-400 hover:border-red-400" : "text-white"}`} 
               onClick={(e) => {e.stopPropagation() ;setFollowing(!following)}}
               onMouseEnter={() => setIsHovered(true)}
               onMouseLeave={() => setIsHovered(false)}
@@ -54,7 +54,7 @@ export default function RightAside({setProfile, setPage}) {
           </div>
         </div>
 
-        <div className='sticky top-0 z-1 h-full flex flex-col gap-4 bg-white border border-gray-200 rounded-xl  '>
+        <div className='sticky top-0 z-1 h-full flex flex-col gap-4 bg-background border border-gray-200 rounded-xl  '>
           <h2 className='text-2xl font-bold border-b border-gray-200 p-3'>What's happening</h2>
 
           <div className=' flex flex-col gap-1 border-b border-gray-200 p-4 cursor-pointer' onClick={() => setPage("search")}>
