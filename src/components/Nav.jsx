@@ -13,7 +13,7 @@ export default function Nav({setProfile, setPage, setShowToTweet}) {
     }
 
     return (
-        <div className='h-screen w-full flex flex-col justify-between items-start border-r border-gray-200'>
+        <div className='h-dvh w-full flex flex-col justify-between items-start border-r border-gray-200'>
             <a className='border-b border-gray-200 hover:bg-gray-200 rounded-full p-4' title='Home' href='/' onClick={() => setFocus("home")}>
                 <svg
                 xmlns="http://www.w3.org/2000/svg"
